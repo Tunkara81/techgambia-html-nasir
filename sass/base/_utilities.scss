@@ -13,14 +13,21 @@
 }
 
 .centering {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
     max-width: $centering-width;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
+    
 
     @include at-least($small-tablet) {
         padding-left: 40px;
         padding-right: 40px;
+    }
+    &.md{
+        padding-bottom: 20px;
     }
 }

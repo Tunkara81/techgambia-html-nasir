@@ -4,6 +4,11 @@
     position: relative;
     margin-left: -#{$grid-gutter};
     margin-right: -#{$grid-gutter};
+    &.grid-reverse{
+        @include until($tablet){
+            flex-direction: column-reverse;
+        }
+    }
 }
 
 [class^="grid-"],

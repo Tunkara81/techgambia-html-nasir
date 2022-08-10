@@ -5,7 +5,7 @@ nav ul,
 }
 
 .main-nav {
-    color: white;
+    color: grey;
 
     @include until($small-tablet) {
         -webkit-overflow-scrolling: touch;
@@ -61,12 +61,34 @@ nav ul,
                 font-size: 18px;
                 font-weight: 400;
                 color: inherit;
-
+                position: relative;
                 &:hover {
-                    color: #d1d1d1;
+                    color: white;
+                    &:before{
+                        content: "...";
+                        position: absolute;
+                        bottom: -10px;
+                        letter-spacing: 5px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
                 }
+                &.active{
+                    color: white;
+                    &:before{
+                        content: "...";
+                        position: absolute;
+                        bottom: -10px;
+                        letter-spacing: 5px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+                
+                
             }
         }
+       
     }
 
     .sub-menu {
